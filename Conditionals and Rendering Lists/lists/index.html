@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <script src="https://unpkg.com/vue"> </script>
+    
+</head>
+<body>
+    
+    <div id="app">
+        <ul>
+        <!-- v-for loop through array and replicate the elements the v-for sets -->
+        <!-- extracting the current first element, second the index of the element -->
+          <li v-for="(ingredient, i) in ingredients" :key="ingredient"> {{ ingredient }} ({{ i }})</li>
+        </ul>
+        
+        <!-- vuejs proxy the push method, does not create new array, only add new to the existing one. Simply updates the position in the array. Does not keep of the specific elemnt. Add unique key to be safe in the backend. If updated weird places. check if assign key. -->
+        <button @click="ingredients.push('spices')">Add new</button>
+        
+          <hr>
+        
+        <ul>
+          <li v-for="person in persons">
+          <!-- first value of the proberty, key name of the proberty -->
+            <div v-for="(value, key, index) in person">{{ key }}: {{ value }} ({{ index }})</div>
+          </li>
+        </ul>
+        <!-- loop through the numbers -->
+        <span v-for="n in 10">{{ n }}</span>
+        <hr>
+        
+        <template v-for="(ingredient, index) in ingredients">
+           <h1>{{ ingredient }}</h1>
+          <p>{{ index }}</p>
+        </template>
+      </div>
+
+      <script src="vue.js"></script>
+</body>
+</html>

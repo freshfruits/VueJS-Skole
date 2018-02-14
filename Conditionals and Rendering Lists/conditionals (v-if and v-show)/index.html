@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <script src="https://unpkg.com/vue"> </script>
+    
+</head>
+<body>
+    
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <div id="app">
+            <p v-if="show">You can see me!</p>
+            <p>Do you also see me?</p>
+            <template v-if="show">
+              <h1>Heading</h1>
+              <p v-show="show">Inside a template</p> <!-- show er der stadig, men den får bare en display:none gennem css -->
+            </template>
+            <button @click="show = !show">Switch</button>
+          </div>
+          
+          
+
+      <script src="vue.js"></script>
+</body>
+</html>
