@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Slayer</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" id="give-up" @click="giveUp">
+          Monster Hunter
+        </a>
+      </nav>
+    <div class="container">
+            <section class="row mx-auto">
+                    <div class="col-sm-6 columns">
+                        <h1 class="text-center">Player</h1>
+                        <div class="progress">
+                            <div class="progress-bar"  role="progressbar" :style="{width: playerHealth + '%'}" > {{ playerHealth }} </div>
+                        </div>
+                    </div>
+                    <div class="col-sm columns">
+                        <h1 class="text-center">Evil Creature</h1>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger"  role="progressbar" :style="{width: monsterHealth + '%'}" > {{ monsterHealth }} </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="row controls" v-if="!gameIsRunning">
+                    <div class="col-sm columns">
+                        <button type="button" class="btn btn-primary" id="start-game" @click="startGame">Start new game</button>
+                    </div>
+                </section>
+                <section class="row controls" v-else="">
+                    <div class="col-sm" role="group">
+                        <button type="button" class="btn btn-danger" id="attack" @click="attack">Attack</button>
+                        <button type="button" class="btn btn-warning" id="special-attack" @click="specialAttack">Special Attack</button>
+                        <button type="button" class="btn btn-success" id="heal" @click="heal">Heal</button>
+                        <button type="button" class="btn btn-dark" id="give-up" @click="giveUp">Give up!</button>
+                    </div>
+                </section>
+                <section class="row log" v-if="turns.length > 0">
+                    <div class="col-6 mx-auto">
+                        <ul>
+                            <li v-for="turn in turns"
+                            :class="{'player-turn': turn.isPlayer, 'monster-turn' :!turn.isPlayer}"> 
+                                {{ turn.text }}
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
