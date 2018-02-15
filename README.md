@@ -33,7 +33,7 @@ VueJS and React can be used on the different pages of an MPA, you would add widg
  * Memory leaks.
  * Security. JS is less secure due to XSS. 
 
-Crawlers can understand the page and even if you render it with js but have a big problem if you’re loading the content asynchronosusly and that happends a lot on single page applications. example the spinner on the site come and is loading. But the crawler doesnt know there will be more data to arrive, and this data will eventually be rendered on the page so to the crawler if you’re loading a list of blog articles doesnt know. 
+Crawlers can understand the page and even if you render it with js but have a big problem if you’re loading the content asynchronously and that happends a lot on single page applications. example the spinner on the site come and is loading. But the crawler doesnt know there will be more data to arrive, and this data will eventually be rendered on the page so to the crawler if you’re loading a list of blog articles doesnt know. 
 
 Typically suppoert of modern SPA than old browsers. You won’t see IE8 support. 
 
