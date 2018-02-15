@@ -13,6 +13,7 @@
 Frameworks Examples:
  * Angular
  * VueJS
+ * React
  
  **Advantages**: Highly reactive. Better user experience. Decoupled frontend.
  
@@ -20,9 +21,10 @@ Decoupled frontend: If you’re creating a SPA, you dont need to write any serve
 
 The website re-render the pages. Part of the page is rerendered. We only get one page from the server. This one page also downloads a couple of assets, but usually a lot of javascripts. Because it is then the javascript code which will listen to url changes to clicks on links and then rerender parts of the DOM in the loaded page whenever we need to do something, when we “switch the page”, but we rerender it. 
 
-Usually use frameworks like Reach, angular or vuejs for single page applications.
+Usually use frameworks like React, Angular or VueJS for single page applications.
 
-Note: VueJS and React can be used on the different pages of an MPA, you would add widgests or enhance parts of the pages with them. 
+**Note**: <br>
+VueJS and React can be used on the different pages of an MPA, you would add widgests or enhance parts of the pages with them. 
 
 **Disadvantage**:
  * SEO is difficult.
