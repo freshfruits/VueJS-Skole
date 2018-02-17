@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number Guess Game</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                Random Number Guess Game
+            </a>
+        </nav>
+        <div class="container">
+            <section class="col-6 mx-auto">
+                <h2>Random Number Guess Game</h2>
+                <hr>
+                <p>Gæt et tal mellem 1 og 10! =)</p>
+                {{ text }}
+                <br> <br>
+                <div class="input-group input-group-sm mb-3">
+                    <input type="number" v-model="userInput" class="form-control">
+                </div>
+            </section>
+        </div>
+      </div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
