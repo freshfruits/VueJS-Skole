@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quotes</title>
+        <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" id="">
+                    Quotes
+                </a>
+            </nav>
+            <div class="container align-items-center">
+                <section class="col-6 mx-auto">
+                        <div class="col-sm text-center">
+                            <h1 class="display-4">Quotes!</h1>
+                            <br>
+                            <p>"{{ status }}"</p>
+                            <button class="btn btn-warning btn-sm"  @click="refresh">Nyt Quote</button>
+                            <hr>
+                            <p>Lavet af {{ name }}</p>
+                        </div>
+                </section>
+            </div>
+        </div>
+
+        <script src="vue.js"></script>
+    </body>
+</html>
