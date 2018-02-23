@@ -21,7 +21,9 @@ new Vue({
         restartGame: function () {
             this.gameIsRunning = false;
         },
-        checkField: function(field) {
+        checkField: function() {
+            
+
             this.attempts++;
 
             if (this.checkWin()) {
